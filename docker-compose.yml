@@ -1,0 +1,11 @@
+services:
+  pg:
+    image: postgres
+    environment:
+      POSTGRES_DB: telegram_db
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5431:5432"
+    volumes:
+      - "./data/pg:/var/lib/postgresql/data"
