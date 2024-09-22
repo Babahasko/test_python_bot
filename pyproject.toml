@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "firstbot"
+version = "0.1.0"
+description = "My awesome first telegrma bot"
+authors = ["Babahasko <zakutni4ek@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+package-mod = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiogram = "^3.13.1"
+asyncpg = "^0.29.0"
+openai = "^1.47.0"
+pydantic = "^2.9.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
