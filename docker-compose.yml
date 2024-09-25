@@ -9,3 +9,12 @@ services:
       - "5431:5432"
     volumes:
       - "./data/pg:/var/lib/postgresql/data"
+
+  app:
+    build: .
+    command: sh -c "python main.py"
+    env_file:
+      - ./.env
+    restart: always
+    depends_on:
+      - pg
